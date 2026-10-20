@@ -69,3 +69,31 @@ images/       the logo and a picture
 - Akhin
 - Abhinav
 - Satyam
+
+## What we built
+We repaired the broken page (day 1) and then extended it.
+
+**Day 2: content**
+
+- semantic HTML: `header`, `nav`, `main`, `section`, `figure`, `footer`
+- a harvest table with `caption` and `th scope`
+- an inline SVG sun icon
+- a FAQ with `details` and `summary`, which works without JavaScript
+- a skip link, visible focus outlines and a mobile layout
+
+**Day 3: functionality**
+
+- search by name, Latin name or use (try "tea" or "bees")
+- filter by life cycle: all, annual or perennial
+- favourites: click ☆ on a card; they are saved in `localStorage`
+  and stay after a reload
+
+### How it works
+
+1. `app.js` fetches `data/herbs.json` from the server.
+2. The herbs, the search text, the filter and the favourites live in one `state` object.
+3. When the user types, picks a filter or clicks a star, the state changes
+   and `render()` draws the cards again.
+4. Favourites are written to `localStorage`.
+
+On Windows PowerShell, use `npx.cmd serve` if `npx` is blocked.
