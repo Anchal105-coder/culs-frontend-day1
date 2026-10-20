@@ -261,3 +261,97 @@ details p {
     margin-bottom: 0.5rem;
   }
 }
+/* Day 3: search, filters and favourites */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--leaf-light);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field label,
+legend {
+  font-weight: 600;
+}
+
+#search {
+  min-width: 14rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  font: inherit;
+}
+
+fieldset {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  margin-bottom: 0.25rem;
+  padding: 0;
+}
+
+.filters label {
+  cursor: pointer;
+}
+
+input:focus-visible,
+.favourite:focus-visible {
+  outline: 3px solid #f6d365;
+  outline-offset: 2px;
+}
+
+.card {
+  position: relative;
+}
+
+.card h3 {
+  padding-right: 2.5rem;
+}
+
+.favourite {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--soil);
+  cursor: pointer;
+}
+
+.favourite:hover {
+  background: var(--leaf-light);
+}
+
+.favourite[aria-pressed="true"] {
+  color: #b8860b;
+}
+
+@media (max-width: 40rem) {
+  .field,
+  #search {
+    width: 100%;
+    min-width: 0;
+  }
+}
