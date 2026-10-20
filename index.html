@@ -3,50 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small herb garden with herbs for the kitchen, for tea and for the bees.">
   <title>The Little Herb Garden</title>
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <img class="logo" src="images/logo.svg" alt="" width="48" height="48">
     <p class="site-name">The Little Herb Garden</p>
-    <nav>
+    <nav aria-label="Main">
       <ul>
         <li><a href="#herbs">Herbs</a></li>
+        <li><a href="#seasons">Seasons</a></li>
         <li><a href="#visit">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="intro">
       <div>
         <h1>Herbs you can smell, taste and grow</h1>
         <p>A small garden with herbs for the kitchen, for tea and for the bees.
           See <a href="#herbs">what grows here</a>.</p>
       </div>
-      <img class="hero" src="images/garden.svg" alt="Two raised beds full of herbs, with a bee">
+      <figure>
+        <img class="hero" src="images/garden.svg" alt="Two raised beds full of herbs, with a bee" width="600" height="400">
+        <figcaption>The two raised beds in summer.</figcaption>
+      </figure>
     </section>
 
     <section id="herbs">
       <h2>What grows here</h2>
-      <p class="count">Loading the herbs…</p>
+      <p class="count" aria-live="polite">Loading the herbs…</p>
       <ul id="herbs-list" class="cards"></ul>
+      <noscript>
+        <p>The herb list needs JavaScript. You can still read the data in
+          <a href="data/herbs.json">herbs.json</a>.</p>
+      </noscript>
+    </section>
+
+    <section id="seasons">
+      <h2>When to pick</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Best season to harvest each herb</caption>
+          <thead>
+            <tr>
+              <th scope="col">Herb</th>
+              <th scope="col">Spring</th>
+              <th scope="col">Summer</th>
+              <th scope="col">Autumn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Basil</th><td>No</td><td>Yes</td><td>No</td></tr>
+            <tr><th scope="row">Spearmint</th><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><th scope="row">Rosemary</th><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><th scope="row">Lavender</th><td>No</td><td>Yes</td><td>No</td></tr>
+            <tr><th scope="row">Chamomile</th><td>No</td><td>Yes</td><td>No</td></tr>
+            <tr><th scope="row">Chives</th><td>Yes</td><td>Yes</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="visit">
       <h2>Visit</h2>
-      <p>The garden is open every day from sunrise to sunset.
-        Bring a friend, rub a leaf between your fingers, and leave the bees alone.</p>
+      <div class="visit">
+        <svg class="icon" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="sun-title">
+          <title id="sun-title">Sun</title>
+          <circle cx="32" cy="32" r="13" fill="#f6d365"/>
+          <path d="M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M12 52l6-6M46 18l6-6"
+                stroke="#e0a800" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <dl class="facts">
+          <dt>Open</dt>
+          <dd>Every day, from sunrise to sunset</dd>
+          <dt>Entry</dt>
+          <dd>Free</dd>
+          <dt>Please</dt>
+          <dd>Rub a leaf between your fingers, and leave the bees alone.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Questions</h2>
+      <details>
+        <summary>Can I pick the herbs?</summary>
+        <p>Yes, a few leaves for your kitchen. Please do not pull out whole plants.</p>
+      </details>
+      <details>
+        <summary>Can I bring my dog?</summary>
+        <p>Yes, on a lead. Keep it out of the beds.</p>
+      </details>
+      <details>
+        <summary>Why are there so many bees?</summary>
+        <p>Thyme, lavender and sage flower all summer, and bees love them.</p>
+      </details>
     </section>
 
     <section id="about">
       <h2>About</h2>
       <p>The garden is made up, and so is this site: a practice project for
-        <a href="https://github.com/pepe/culs-frontend-day1">Frontend Development, day 1</a>.</p>
+        <a href="https://github.com/pepe/culs-frontend-2026">Contemporary Frontend Development</a>.</p>
     </section>
   </main>
 
@@ -55,3 +122,5 @@
     <p>Made with HTML, CSS and JavaScript.
       <a href="https://developer.mozilla.org/">MDN</a> helped.</p>
   </footer>
+</body>
+</html>
