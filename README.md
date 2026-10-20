@@ -65,7 +65,7 @@ images/       the logo and a picture
 ```
 ## Team
 
-Anchal
-Akhin
-Abhinav
-Satyam
+- Anchal
+- Akhin
+- Abhinav
+- Satyam
