@@ -39,8 +39,27 @@
       </figure>
     </section>
 
-    <section id="herbs">
+       <section id="herbs">
       <h2>What grows here</h2>
+
+      <form class="filters" role="search" aria-label="Filter herbs">
+        <div class="field">
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="e.g. tea, bees, mint">
+        </div>
+
+        <fieldset>
+          <legend>Life</legend>
+          <label><input type="radio" name="life" value="all" checked> All</label>
+          <label><input type="radio" name="life" value="annual"> Annual</label>
+          <label><input type="radio" name="life" value="perennial"> Perennial</label>
+        </fieldset>
+
+        <label class="only-favourites">
+          <input type="checkbox" id="only-favourites"> Only favourites
+        </label>
+      </form>
+
       <p class="count" aria-live="polite">Loading the herbs…</p>
       <ul id="herbs-list" class="cards"></ul>
       <noscript>
