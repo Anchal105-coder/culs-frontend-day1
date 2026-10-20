@@ -126,3 +126,138 @@ footer {
   text-align: center;
   color: var(--soil);
 }
+/* Day 2: new sections */
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background: white;
+  color: var(--leaf);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #f6d365;
+  outline-offset: 2px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--soil);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--soil);
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+thead th {
+  background: var(--leaf);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--leaf-light);
+}
+
+.visit {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+.facts dt {
+  font-weight: 700;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+details {
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+details p {
+  margin: 0;
+}
+
+@media (max-width: 40rem) {
+  nav {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .visit {
+    flex-direction: column;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .facts dd {
+    margin-bottom: 0.5rem;
+  }
+}
