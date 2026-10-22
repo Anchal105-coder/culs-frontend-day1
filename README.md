@@ -1,8 +1,8 @@
 # Team ओस की बूँदें
-- Anchal
-- Akhin
-- Abhinav
-- Satyam
+- Anchal Singh
+- Akhin Asokan Nair
+- Abhinav Kumar Parbat
+- Satyam Dwivedi
 
 # The Little Herb Garden
 
