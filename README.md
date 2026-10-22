@@ -125,9 +125,9 @@ Work was done in small commits, one change each. See the [commit history](https:
 - **Hash routing instead of separate HTML files:** one `index.html`, as the assignment asks. The hash is never sent to the server, so it also works on GitHub Pages without any server setup.
 - **`herbs.json` is only a list of ids:** each herb's data lives in exactly one place, so nothing can get out of sync.
 - **One broken file must not break the list:** the home view uses `Promise.allSettled`.
-- <What went wrong during the project and how you found it, in your own words.>
-- <What you would do next.>
+- **What went wrong:** the logo file was called `Logo.svg`, but the page asked for `logo.svg`. It worked on Windows, which ignores capital letters, but would break on GitHub Pages, which does not. We found it in the Network panel as a 404 and renamed the file with `git mv`.
+- **What we would do next:** add photos of each herb, more herbs, and a Czech version of the site.
 
 ## Credits
 
-Course by Josef Pospíšil ([@pepe](https://github.com/pepe)): [culs-frontend-2026](https://github.com/pepe/culs-frontend-2026). Documentation from [MDN](https://developer.mozilla.org/). <Say which AI help you used and for what.>
+Course by Josef Pospíšil ([@pepe](https://github.com/pepe)): [culs-frontend-2026](https://github.com/pepe/culs-frontend-2026). Documentation from [MDN](https://developer.mozilla.org/). We used Claude to help find the day 1 bugs, explain Git commands and review the JavaScript. We checked and understood every line before committing it.
